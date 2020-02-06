@@ -28,10 +28,10 @@
               <a class="main-nav__link" href="#">Прайс-лист</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Магазин</a>
+              <a class="main-nav__link" href="catalog.html">Магазин</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Контакты</a>
+              <a class="main-nav__link" href="#contacts">Контакты</a>
             </li>
           </ul>
           <ul class="personal-area">
@@ -81,12 +81,14 @@
             <li class="news__item">
               <p class="news__description">Нам наконец завезли ягермайстер! еперь вы можете пропустить стаканчик во
                 время стрижки</p>
-              <date class="news__date" datetime="2020-01-11">11 января</date>
+              <!-- <date class="news__date" datetime="2020-01-11">11 января</date> -->
+              <span class="news__date">11 января</span>
             </li>
             <li class="news__item">
               <p class="news__description">В нашей команде пополнение, борис «бритва» стригунец, обладaтель множества
                 титулов и наград пополнил наши стройные ряды</p>
-              <date class="news__date" datetime="2020-01-18">18 января</date>
+              <!-- <date class="news__date" datetime="2020-01-18">18 января</date> -->
+              <span class="news__date">18 января</span>
             </li>
           </ul>
           <a class="btn" href="news.html">Все новости</a>
@@ -110,7 +112,7 @@
       </div>
       <div class="page-wrapper">
 
-        <section class="section contacts">
+        <section id="contacts" class="section contacts">
           <h2 class="section__title">Контактная информация</h2>
           <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
@@ -122,8 +124,8 @@
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
             <div>
               Время работы:
-              <time itemprop="openingHours" datetime="Mo-Fr 10:00-22:00">Пн—Пт: с 10:00 до 22:00</time>
-              <time itemprop="openingHours" datetime="Sa-Su 10:00-19:00">Сб—Вс: с 10:00 до 19:00</time>
+              <span itemprop="openingHours" content="Mo-Fr 10:00-22:00">Пн—Пт: с 10:00 до 22:00</span>
+              <span itemprop="openingHours" content="Sa-Su 10:00-19:00">Сб—Вс: с 10:00 до 19:00</span>
             </div>
           </div>
           <div class="contacts__buttons">
@@ -152,24 +154,11 @@
 
         <section class="page-footer__contacts footer-contacts">
           <h2 class="visually-hidden">Контактная информация</h2>
-          <div itemscope itemtype="http://schema.org/LocalBusiness" class="contacts">
+          <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
             <a href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
           </div>
-          <!-- <div class="vcard">
-            <div>
-              <span class="category">Барбершоп</span>
-              <span class="fn org">"Бородинский"</span>
-            </div>
-            <div class="adr">
-              Адрес:
-              <span class="locality">г. Санкт-Петербург</span>,
-              <span class="street-address">б. Конюшенная, д. 19/8</span>
-            </div>
-            <a href="map.html">Как нас найти?</a>
-            <div>Телефон: <span class="tel">+7 (495) 666-02-66</span></div>
-          </div> -->
         </section>
         <!-- /.footer-contacts -->
 
@@ -190,7 +179,7 @@
         </section>
         <!-- /.social -->
 
-        <section class="copyright" role="contentinfo">
+        <section class="copyright">
           <h2 class="visually-hidden">Правообладатель</h2>
           <p>Разработано:</p>
           <a href="https://htmlacademy.ru">HTML Academy</a>
