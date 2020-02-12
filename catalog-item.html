@@ -54,27 +54,28 @@
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper">
-        <nav class="page-header__nav main-nav">
+        <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
+          <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
           <a class="page-header__logo logo" href="index.html">
             <img src="img/logo-small.svg" width="111" height="24" alt="Барбершоп Бородинский">
           </a>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
+          <ul class="main-nav__list" role="menu">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#">Информация</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#">Новости</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#">Прайс-лист</a>
             </li>
-            <li class="main-nav__item" aria-current="page">
-              <span class="main-nav__link">
+            <li class="main-nav__item" role="menuitem" aria-current="page">
+              <a class="main-nav__link">
                 <span class="visually-hidden">Текущий пункт:</span>
                 Магазин
-              </span>
+              </a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#">Контакты</a>
             </li>
           </ul>
@@ -122,26 +123,30 @@
           <p class="photos__description">
             <picture>
               <source type="image/webp" srcset="img/files/catalog-item-big-1@1x.webp 1x">
-              <img src="img/files/catalog-item-big-1@1x.jpg" width="460" height="498" alt="Набор для путешествий «Baxter of California»">
+              <img src="img/files/catalog-item-big-1@1x.jpg" width="460" height="498"
+                alt="Набор для путешествий «Baxter of California»">
             </picture>
           </p>
           <ul class="photos__list">
             <li class="photos__item">
               <picture>
                 <source type="image/webp" srcset="img/files/catalog-item-small-1@1x.webp 1x">
-                <img src="img/files/catalog-item-small-1@1x.jpg" width="140" height="149" alt="Набор для путешествий «Baxter of California»">
+                <img src="img/files/catalog-item-small-1@1x.jpg" width="140" height="149"
+                  alt="Набор для путешествий «Baxter of California»">
               </picture>
             </li>
             <li class="photos__item">
               <picture>
                 <source type="image/webp" srcset="img/files/catalog-item-small-2@1x.webp 1x">
-                <img src="img/files/catalog-item-small-2@1x.jpg" width="140" height="149" alt="Набор для путешествий «Baxter of California»">
+                <img src="img/files/catalog-item-small-2@1x.jpg" width="140" height="149"
+                  alt="Набор для путешествий «Baxter of California»">
               </picture>
             </li>
             <li class="photos__item">
               <picture>
                 <source type="image/webp" srcset="img/files/catalog-item-small-3@1x.webp 1x">
-                <img src="img/files/catalog-item-small-3@1x.jpg" width="140" height="149" alt="Набор для путешествий «Baxter of California»">
+                <img src="img/files/catalog-item-small-3@1x.jpg" width="140" height="149"
+                  alt="Набор для путешествий «Baxter of California»">
               </picture>
             </li>
           </ul>

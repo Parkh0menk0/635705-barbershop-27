@@ -54,24 +54,25 @@
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper">
-        <nav class="page-header__nav main-nav">
+        <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
+          <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
           <a class="page-header__logo logo">
             <img src="img/index-logo.svg" width="371" height="155" alt="Барбершоп Бородинский">
           </a>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
+          <ul class="main-nav__list" role="menu">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#">Информация</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#">Новости</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#">Прайс-лист</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="catalog.html">Магазин</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item" role="menuitem">
               <a class="main-nav__link" href="#contacts">Контакты</a>
             </li>
           </ul>
