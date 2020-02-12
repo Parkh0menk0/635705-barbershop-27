@@ -188,7 +188,29 @@
         <section class="section sign-up">
           <h2 class="section__title">Записаться</h2>
           <p class="sing-up__lead">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-          <!-- Здесь будет форма -->
+          <form class="sign-up__form sign-up-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="sign-up-form__row">
+              <p class="sign-up-form__col">
+                <label class="sign-up-form__label"for="date">Дата</label>
+                <input type="text" name="date" id="date" placeholder="08.10.2017" required>
+              </p>
+              <p class="sign-up-form__col">
+                <label class="sign-up-form__label"for="time">Время</label>
+                <input type="text" name="time" id="time" placeholder="10:00" required>
+              </p>
+            </div>
+            <div class="sign-up-form__row">
+              <p class="sign-up-form__col">
+                <label class="sign-up-form__label"for="name">Ваше имя</label>
+                <input type="text" name="name" id="name" placeholder="Борода" required>
+              </p>
+              <p class="sign-up-form__col">
+                <label class="sign-up-form__label"for="phone">Телефон</label>
+                <input type="tel" name="phone" id="phone" placeholder="+7 123 456-78-90" required>
+              </p>
+            </div>
+            <button class="sign-up-form__btn" type="submit">Отправить</button>
+          </form>
         </section>
         <!-- /.sign-up -->
 
