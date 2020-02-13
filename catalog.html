@@ -121,8 +121,8 @@
         </aside>
         <!-- /.search -->
 
-        <section class="gallery">
-          <h2 class="visually-hidden">Перечень средств для ухода</h2>
+        <section class="gallery" aria-labelledby="gallery">
+          <h2 id="gallery" class="visually-hidden">Перечень средств для ухода</h2>
           <ul class="gallery__list">
             <li class="gallery__item product">
               <h3 class="product__title">
@@ -135,7 +135,8 @@
               <a href="catalog-item.html">
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-1@1x.webp 1x">
-                  <img src="img/files/gallery-item-1@1x.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+                  <img src="img/files/gallery-item-1@1x.jpg" width="220" height="165"
+                    alt="Набор для путешествий «Baxter of California»">
                 </picture>
               </a>
               <p class="product__buy">
@@ -153,7 +154,8 @@
               <a href="catalog-item.html">
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-2@1x.webp 1x">
-                  <img src="img/files/gallery-item-2@1x.jpg" width="220" height="165" alt="Увлажняющий кондиционер «Baxter of California»">
+                  <img src="img/files/gallery-item-2@1x.jpg" width="220" height="165"
+                    alt="Увлажняющий кондиционер «Baxter of California»">
                 </picture>
               </a>
               <p class="product__buy">
@@ -189,7 +191,8 @@
               <a href="catalog-item.html">
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-4@1x.webp 1x">
-                  <img src="img/files/gallery-item-4@1x.jpg" width="220" height="165" alt="Глина для укладки волос «American crew»">
+                  <img src="img/files/gallery-item-4@1x.jpg" width="220" height="165"
+                    alt="Глина для укладки волос «American crew»">
                 </picture>
               </a>
               <p class="product__buy">
@@ -207,7 +210,8 @@
               <a href="catalog-item.html">
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-5@1x.webp 1x">
-                  <img src="img/files/gallery-item-5@1x.jpg" width="220" height="165" alt="Гель для волос «American crew»">
+                  <img src="img/files/gallery-item-5@1x.jpg" width="220" height="165"
+                    alt="Гель для волос «American crew»">
                 </picture>
               </a>
               <p class="product__buy">
@@ -225,7 +229,8 @@
               <a href="catalog-item.html">
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-6@1x.webp 1x">
-                  <img src="img/files/gallery-item-6@1x.jpg" width="220" height="165" alt="Набор для бритья «Baxter of California»">
+                  <img src="img/files/gallery-item-6@1x.jpg" width="220" height="165"
+                    alt="Набор для бритья «Baxter of California»">
                 </picture>
               </a>
               <p class="product__buy">
@@ -260,9 +265,9 @@
     <div class="container">
       <div class="page-footer__wrapper">
 
-        <section class="page-footer__contacts footer-contacts">
-          <h2 class="visually-hidden">Контактная информация</h2>
-          <div itemscope itemtype="http://schema.org/LocalBusiness" class="contacts">
+        <section class="page-footer__contacts footer-contacts" aria-labelledby="footer-contacts">
+          <h2 id="footer-contacts" class="visually-hidden">Контактная информация</h2>
+          <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
             <a href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
@@ -270,8 +275,8 @@
         </section>
         <!-- /.footer-contacts -->
 
-        <section class="social">
-          <h2 class="visually-hidden">Социальные сети</h2>
+        <section class="social" aria-labelledby="social">
+          <h2 id="social" class="visually-hidden">Социальные сети</h2>
           <b class="social__lead">Давайте дружить!</b>
           <ul class="social__list">
             <li class="social__item">
@@ -301,8 +306,8 @@
         </section>
         <!-- /.social -->
 
-        <section class="copyright">
-          <h2 class="visually-hidden">Правообладатель</h2>
+        <section class="copyright" aria-labelledby="copyright">
+          <h2 id="copyright" class="visually-hidden">Правообладатель</h2>
           <p>Разработано:</p>
           <a href="https://htmlacademy.ru">HTML Academy</a>
         </section>
@@ -312,6 +317,40 @@
     </div>
   </footer>
   <!-- /.page-footer -->
+
+  <section class="modal" aria-labelledby="modal">
+    <h2 id="modal" class="modal__title">Личный кабинет</h2>
+    <p class="modal__lead">Введите пожалуйста свой логин и пароль</p>
+    <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="modal-form__row">
+        <label class="visually-hidden" for="login">Логин</label>
+        <input type="email" name="login" id="login" placeholder="Логин" required>
+      </p>
+      <p class="modal-form__row">
+        <label class="visually-hidden" for="password">Пароль</label>
+        <input type="password" name="password" id="password" placeholder="Пароль" required>
+      </p>
+      <div class="modal-form__row">
+        <p class="modal-form__col">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <label class="modal-form__label" for="checkbox">Запомните меня</label>
+        </p>
+        <a class="modal-form__link" href="#">Я забыл пароль!</a>
+      </div>
+      <button class="modal-form__btn" type="submit">Войти</button>
+    </form>
+  </section>
+  <!-- /.modal -->
+
+  <section class="map" aria-labelledby="map">
+    <h2 id="map" class="visually-hidden">Как до нас добраться</h2>
+    <p class="map__content">
+      <img src="img/map.jpg" width="780" height="560"
+        alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    </p>
+    <button class="map__btn" type="button">Закрыть</button>
+  </section>
+  <!-- /.map -->
 
 </body>
 

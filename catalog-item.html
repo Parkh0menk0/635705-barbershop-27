@@ -118,8 +118,8 @@
 
       <div class="catalog-item__wrapper">
 
-        <section class="catalog-item__photos photos">
-          <h2 class="visually-hidden">Изображения товара</h2>
+        <section class="catalog-item__photos photos" aria-labelledby="photos">
+          <h2 id="photos" class="visually-hidden">Изображения товара</h2>
           <p class="photos__description">
             <picture>
               <source type="image/webp" srcset="img/files/catalog-item-big-1@1x.webp 1x">
@@ -153,7 +153,8 @@
         </section>
         <!-- /.photos -->
 
-        <section class="catalog-item__info info">
+        <section class="catalog-item__info info" aria-labelledby="info">
+          <h2 id="info" class="visually-hidden">Описание товара</h2>
           <div class="info__wrapper">
             <p class="info__availability">Есть в наличии</p>
             <p class="info__vendor-code">Артикул: dexter-ae</p>
@@ -189,9 +190,9 @@
     <div class="container">
       <div class="page-footer__wrapper">
 
-        <section class="page-footer__contacts footer-contacts">
-          <h2 class="visually-hidden">Контактная информация</h2>
-          <div itemscope itemtype="http://schema.org/LocalBusiness" class="contacts">
+        <section class="page-footer__contacts footer-contacts" aria-labelledby="footer-contacts">
+          <h2 id="footer-contacts" class="visually-hidden">Контактная информация</h2>
+          <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
             <a href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
@@ -199,8 +200,8 @@
         </section>
         <!-- /.footer-contacts -->
 
-        <section class="social">
-          <h2 class="visually-hidden">Социальные сети</h2>
+        <section class="social" aria-labelledby="social">
+          <h2 id="social" class="visually-hidden">Социальные сети</h2>
           <b class="social__lead">Давайте дружить!</b>
           <ul class="social__list">
             <li class="social__item">
@@ -230,8 +231,8 @@
         </section>
         <!-- /.social -->
 
-        <section class="copyright">
-          <h2 class="visually-hidden">Правообладатель</h2>
+        <section class="copyright" aria-labelledby="copyright">
+          <h2 id="copyright" class="visually-hidden">Правообладатель</h2>
           <p>Разработано:</p>
           <a href="https://htmlacademy.ru">HTML Academy</a>
         </section>
@@ -241,6 +242,40 @@
     </div>
   </footer>
   <!-- /.page-footer -->
+
+  <section class="modal" aria-labelledby="modal">
+    <h2 id="modal" class="modal__title">Личный кабинет</h2>
+    <p class="modal__lead">Введите пожалуйста свой логин и пароль</p>
+    <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="modal-form__row">
+        <label class="visually-hidden" for="login">Логин</label>
+        <input type="email" name="login" id="login" placeholder="Логин" required>
+      </p>
+      <p class="modal-form__row">
+        <label class="visually-hidden" for="password">Пароль</label>
+        <input type="password" name="password" id="password" placeholder="Пароль" required>
+      </p>
+      <div class="modal-form__row">
+        <p class="modal-form__col">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <label class="modal-form__label" for="checkbox">Запомните меня</label>
+        </p>
+        <a class="modal-form__link" href="#">Я забыл пароль!</a>
+      </div>
+      <button class="modal-form__btn" type="submit">Войти</button>
+    </form>
+  </section>
+  <!-- /.modal -->
+
+  <section class="map" aria-labelledby="map">
+    <h2 id="map" class="visually-hidden">Как до нас добраться</h2>
+    <p class="map__content">
+      <img src="img/map.jpg" width="780" height="560"
+        alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    </p>
+    <button class="map__btn" type="button">Закрыть</button>
+  </section>
+  <!-- /.map -->
 
 </body>
 
