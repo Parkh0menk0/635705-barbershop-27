@@ -70,7 +70,7 @@
               <a class="main-nav__link" href="#">Прайс-лист</a>
             </li>
             <li class="main-nav__item" role="menuitem" aria-current="page">
-              <a class="main-nav__link">
+              <a class="main-nav__link" tabindex="0">
                 <span class="visually-hidden">Текущий пункт:</span>
                 Магазин
               </a>
@@ -115,27 +115,72 @@
 
       <div class="goods">
 
-        <aside class="search" role="search">
-          <h2 class="visually-hidden">Фильтр товаров</h2>
-          <!-- Здесь будет форма -->
-        </aside>
+        <section class="search" role="search" aria-labelledby="search">
+          <h2 id="search" class="visually-hidden">Фильтр товаров</h2>
+          <form class="search__form search-form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="search-form__fieldset">
+              <legend class="search-form__legend">Производители</legend>
+              <ul class="search-form__list">
+                <li class="search-form__item">
+                  <input type="checkbox" name="baxter-of-california" id="baxter-of-california" checked>
+                  <label class="search-form__label" for="baxter-of-california" lang="en">Baxter of California</label>
+                </li>
+                <li class="search-form__item">
+                  <input type="checkbox" name="mr-natty" id="mr-natty">
+                  <label class="search-form__label" for="mr-natty" lang="en">Mr Natty</label>
+                </li>
+                <li class="search-form__item">
+                  <input type="checkbox" name="suavecito" id="suavecito" checked>
+                  <label class="search-form__label" for="suavecito" lang="en">Suavecito</label>
+                </li>
+                <li class="search-form__item">
+                  <input type="checkbox" name="malin+goetz" id="malin+goetz">
+                  <label class="search-form__label" for="malin+goetz" lang="en">Malin+Goetz</label>
+                </li>
+                <li class="search-form__item">
+                  <input type="checkbox" name="murrays" id="murrays">
+                  <label class="search-form__label" for="murrays" lang="en">Murray’s</label>
+                </li>
+                <li class="search-form__item">
+                  <input type="checkbox" name="american-crew" id="american-crew" checked>
+                  <label class="search-form__label" for="american-crew" lang="en">American Crew</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="search-form__fieldset">
+              <legend class="search-form__legend">Группы товаров</legend>
+              <ul class="search-form__list">
+                <li class="search-form__item">
+                  <input type="radio" name="goods" id="shaving">
+                  <label class="search-form__label" for="shaving">Бритвенные принадлежности</label>
+                </li>
+                <li class="search-form__item">
+                  <input type="radio" name="goods" id="care" checked>
+                  <label class="search-form__label" for="care">Средства для ухода</label>
+                </li>
+                <li class="search-form__item">
+                  <input type="radio" name="goods" id="accessories">
+                  <label class="search-form__label" for="accessories">Аксессуары</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="search-form__btn" type="submit">Показать</button>
+          </form>
+        </section>
         <!-- /.search -->
 
         <section class="gallery" aria-labelledby="gallery">
           <h2 id="gallery" class="visually-hidden">Перечень средств для ухода</h2>
           <ul class="gallery__list">
             <li class="gallery__item product">
-              <h3 class="product__title">
-                <a href="catalog-item.html" class="product__link">
-                  <span class="product__category"></span>
-                  <span class="product__name"></span>
-                  Набор для путешествий «Baxter of California»
-                </a>
-              </h3>
-              <a href="catalog-item.html">
+              <a href="catalog-item.html" class="product__link">
+                <h3 class="product__title">
+                  <span class="product__category">Набор для путешествий</span>
+                  <span class="product__name" lang="en">«Baxter of California»</span>
+                </h3>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-1@1x.webp 1x">
-                  <img src="img/files/gallery-item-1@1x.jpg" width="220" height="165"
+                  <img src="img/files/gallery-item-1@1x.jpg" width="220" height="165" aria-hidden="true"
                     alt="Набор для путешествий «Baxter of California»">
                 </picture>
               </a>
@@ -145,16 +190,14 @@
               </p>
             </li>
             <li class="gallery__item product">
-              <h3 class="product__title">
-                <a href="catalog-item.html" class="product__link">
+              <a href="catalog-item.html" class="product__link">
+                <h3 class="product__title">
                   <span class="product__category">Увлажняющий кондиционер</span>
-                  <span class="product__name">«Baxter of California»</span>
-                </a>
-              </h3>
-              <a href="catalog-item.html">
+                  <span class="product__name" lang="en">«Baxter of California»</span>
+                </h3>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-2@1x.webp 1x">
-                  <img src="img/files/gallery-item-2@1x.jpg" width="220" height="165"
+                  <img src="img/files/gallery-item-2@1x.jpg" width="220" height="165" aria-hidden="true"
                     alt="Увлажняющий кондиционер «Baxter of California»">
                 </picture>
               </a>
@@ -164,16 +207,14 @@
               </p>
             </li>
             <li class="gallery__item product">
-              <h3 class="product__title">
-                <a href="catalog-item.html" class="product__link">
+              <a href="catalog-item.html" class="product__link">
+                <h3 class="product__title">
                   <span class="product__category">Гель для волос</span>
-                  <span class="product__name">«Suavecito»</span>
-                </a>
-              </h3>
-              <a href="catalog-item.html">
+                  <span class="product__name" lang="en">«Suavecito»</span>
+                </h3>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-3@1x.webp 1x">
-                  <img src="img/files/gallery-item-3@1x.jpg" width="220" height="165" alt="Гель для волос «Suavecito»">
+                  <img src="img/files/gallery-item-3@1x.jpg" width="220" height="165" aria-hidden="true" alt="Гель для волос «Suavecito»">
                 </picture>
               </a>
               <p class="product__buy">
@@ -182,16 +223,14 @@
               </p>
             </li>
             <li class="gallery__item product">
-              <h3 class="product__title">
-                <a href="catalog-item.html" class="product__link">
+              <a href="catalog-item.html" class="product__link">
+                <h3 class="product__title">
                   <span class="product__category">Глина для укладки волос</span>
-                  <span class="product__name">«American crew»</span>
-                </a>
-              </h3>
-              <a href="catalog-item.html">
+                  <span class="product__name" lang="en">«American crew»</span>
+                </h3>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-4@1x.webp 1x">
-                  <img src="img/files/gallery-item-4@1x.jpg" width="220" height="165"
+                  <img src="img/files/gallery-item-4@1x.jpg" width="220" height="165" aria-hidden="true"
                     alt="Глина для укладки волос «American crew»">
                 </picture>
               </a>
@@ -201,16 +240,14 @@
               </p>
             </li>
             <li class="gallery__item product">
-              <h3 class="product__title">
-                <a href="catalog-item.html" class="product__link">
+              <a href="catalog-item.html" class="product__link">
+                <h3 class="product__title">
                   <span class="product__category">Гель для волос</span>
-                  <span class="product__name">American crew</span>
-                </a>
-              </h3>
-              <a href="catalog-item.html">
+                  <span class="product__name" lang="en">American crew</span>
+                </h3>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-5@1x.webp 1x">
-                  <img src="img/files/gallery-item-5@1x.jpg" width="220" height="165"
+                  <img src="img/files/gallery-item-5@1x.jpg" width="220" height="165" aria-hidden="true"
                     alt="Гель для волос «American crew»">
                 </picture>
               </a>
@@ -220,16 +257,14 @@
               </p>
             </li>
             <li class="gallery__item product">
-              <h3 class="product__title">
-                <a href="catalog-item.html" class="product__link">
+              <a href="catalog-item.html" class="product__link">
+                <h3 class="product__title">
                   <span class="product__category">Набор для бритья</span>
-                  <span class="product__name">«Baxter of California»</span>
-                </a>
-              </h3>
-              <a href="catalog-item.html">
+                  <span class="product__name" lang="en">«Baxter of California»</span>
+                </h3>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-6@1x.webp 1x">
-                  <img src="img/files/gallery-item-6@1x.jpg" width="220" height="165"
+                  <img src="img/files/gallery-item-6@1x.jpg" width="220" height="165" aria-hidden="true"
                     alt="Набор для бритья «Baxter of California»">
                 </picture>
               </a>
@@ -239,20 +274,38 @@
               </p>
             </li>
           </ul>
-          <ol class="pagination">
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
-            </li>
-            <li class="pagination__item pagination__item--active">
-              <a class="pagination__link">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">4</a>
-            </li>
-          </ol>
+
+          <section class="pagination" aria-labelledby="pagination">
+            <h2 id="pagination" class="visually-hidden">Пагинация</h2>
+            <ol class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <span class="visually-hidden">Страница номер:</span>
+                  1
+                </a>
+              </li>
+              <li class="pagination__item pagination__item--active">
+                <a class="pagination__link" tabindex="0">
+                  <span class="visually-hidden">Страница номер:</span>
+                  2
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <span class="visually-hidden">Страница номер:</span>
+                  3
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">
+                  <span class="visually-hidden">Страница номер:</span>
+                  4
+                </a>
+              </li>
+            </ol>
+          </section>
+          <!-- /.pagination -->
+
         </section>
         <!-- /.gallery -->
 
@@ -309,7 +362,7 @@
         <section class="copyright" aria-labelledby="copyright">
           <h2 id="copyright" class="visually-hidden">Правообладатель</h2>
           <p>Разработано:</p>
-          <a href="https://htmlacademy.ru">HTML Academy</a>
+          <a href="https://htmlacademy.ru" lang="en">HTML Academy</a>
         </section>
         <!-- /.copyright -->
 
@@ -318,7 +371,7 @@
   </footer>
   <!-- /.page-footer -->
 
-  <section class="modal" aria-labelledby="modal">
+  <section class="modal modal--login" aria-labelledby="modal">
     <h2 id="modal" class="modal__title">Личный кабинет</h2>
     <p class="modal__lead">Введите пожалуйста свой логин и пароль</p>
     <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="post">
@@ -339,16 +392,17 @@
       </div>
       <button class="modal-form__btn" type="submit">Войти</button>
     </form>
+    <button class="modal__close-btn" type="button">Закрыть</button>
   </section>
   <!-- /.modal -->
 
-  <section class="map" aria-labelledby="map">
+  <section class="modal modal--map" aria-labelledby="map">
     <h2 id="map" class="visually-hidden">Как до нас добраться</h2>
     <p class="map__content">
-      <img src="img/map.jpg" width="780" height="560"
+      <img src="img/files/map-desktop@1x.png" width="780" height="560"
         alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
     </p>
-    <button class="map__btn" type="button">Закрыть</button>
+    <button class="modal__close-btn" type="button">Закрыть</button>
   </section>
   <!-- /.map -->
 
