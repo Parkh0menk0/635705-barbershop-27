@@ -56,52 +56,54 @@
   </div>
 
   <header class="page-header">
-    <div class="container">
+    <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
+      <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
+      <a class="page-header__logo logo">
+        <img src="img/index-logo.svg" width="368" height="153" alt="Барбершоп Бородинский">
+      </a>
       <div class="page-header__wrapper">
-        <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
-          <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
-          <a class="page-header__logo logo">
-            <img src="img/index-logo.svg" width="371" height="155" alt="Барбершоп Бородинский">
-          </a>
-          <ul class="main-nav__list site-nav" role="menu">
-            <li class="site-nav__item" role="menuitem">
-              <a class="site-nav__link" href="#">Информация</a>
-            </li>
-            <li class="site-nav__item" role="menuitem">
-              <a class="site-nav__link" href="#">Новости</a>
-            </li>
-            <li class="site-nav__item" role="menuitem">
-              <a class="site-nav__link" href="#">Прайс-лист</a>
-            </li>
-            <li class="site-nav__item" role="menuitem">
-              <a class="site-nav__link" href="catalog.html">Магазин</a>
-            </li>
-            <li class="site-nav__item" role="menuitem">
-              <a class="site-nav__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-nav">
-            <li class="user-nav__item">
-              <a class="user-nav__link" href="#">
-                <svg role="img" aria-hidden="true" width="16" height="16">
-                  <use xlink:href="#icon-login" x="0" y="0"></use>
-                </svg>
-                Вход
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div class="container">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-nav" role="menu">
+              <li class="site-nav__item" role="menuitem">
+                <a class="site-nav__link" href="#">Информация</a>
+              </li>
+              <li class="site-nav__item" role="menuitem">
+                <a class="site-nav__link" href="#">Новости</a>
+              </li>
+              <li class="site-nav__item" role="menuitem">
+                <a class="site-nav__link" href="#">Прайс-лист</a>
+              </li>
+              <li class="site-nav__item" role="menuitem">
+                <a class="site-nav__link" href="catalog.html">Магазин</a>
+              </li>
+              <li class="site-nav__item" role="menuitem">
+                <a class="site-nav__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list user-nav">
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="#">
+                  <svg role="img" aria-hidden="true" width="16" height="16">
+                    <use xlink:href="#icon-login" x="0" y="0"></use>
+                  </svg>
+                  Вход
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
   <!-- /.page-header -->
 
   <main>
-    <h1 class="visually-hidden">Барбершоп Бородинский</h1>
+    <div class="container">
+      <h1 class="visually-hidden">Барбершоп Бородинский</h1>
 
-    <section class="advantages" aria-labelledby="advantages">
-      <h2 id="advantages" class="visually-hidden">Наши преимущества</h2>
-      <div class="container">
+      <section class="advantages" aria-labelledby="advantages">
+        <h2 id="advantages" class="visually-hidden">Наши преимущества</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
             <h3 class="advantages__title">Быстро</h3>
@@ -119,13 +121,10 @@
               же, разве цена не дает определенный статус?</p>
           </li>
         </ul>
-      </div>
-    </section>
-    <!-- /.advantages -->
+      </section>
+      <!-- /.advantages -->
 
-    <div class="container">
       <div class="page-wrapper">
-
         <section class="section news" aria-labelledby="news">
           <h2 id="news" class="section__title">Новости</h2>
           <ul class="news__list">
@@ -139,7 +138,7 @@
               <p class="section__description news__description">В нашей команде пополнение, борис «бритва» стригунец,
                 обладaтель множества
                 титулов и наград пополнил наши стройные ряды</p>
-                <time class="news__date" datetime="2016-01-18">18 января</time>
+              <time class="news__date" datetime="2016-01-18">18 января</time>
             </li>
           </ul>
           <a class="btn" href="news.html">Все новости</a>
@@ -165,7 +164,6 @@
 
       </div>
       <div class="page-wrapper">
-
         <section class="section contacts" aria-labelledby="contacts">
           <h2 id="contacts" class="section__title">Контактная информация</h2>
           <div itemscope itemtype="http://schema.org/LocalBusiness" class="section__description">
@@ -219,10 +217,8 @@
           </form>
         </section>
         <!-- /.sign-up -->
-
       </div>
     </div>
-
   </main>
   <!-- /main -->
 
@@ -234,6 +230,11 @@
           <h2 id="footer-contacts" class="visually-hidden">Контактная информация</h2>
           <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              Адрес:
+              <span itemprop="addressLocality">г. Санкт-Петербург</span>
+              <span itemprop="streetAddress" class="street">б. Конюшенная, д. 19/8</span>
+            </div>
             <a class="footer-contacts__link" href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
           </div>
@@ -272,8 +273,7 @@
         <!-- /.social -->
 
         <section class="copyright" aria-labelledby="copyright">
-          <h2 id="copyright" class="visually-hidden">Правообладатель</h2>
-          <p>Разработано:</p>
+          <h2 id="copyright" class="copyright__title">Разработано:</h2>
           <a class="btn copyright-btn" href="https://htmlacademy.ru" lang="en">HTML Academy</a>
         </section>
         <!-- /.copyright -->
