@@ -9,8 +9,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/icon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="preload" href="./fonts/pt-sans-narrow-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>HTML Academy: Барбершоп</title>
+  <link rel="preload" href="./fonts/pt-sans-narrow-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/pt-sans-narrow-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -62,26 +63,26 @@
           <a class="page-header__logo logo">
             <img src="img/index-logo.svg" width="371" height="155" alt="Барбершоп Бородинский">
           </a>
-          <ul class="main-nav__list" role="menu">
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#">Информация</a>
+          <ul class="main-nav__list site-nav" role="menu">
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#">Информация</a>
             </li>
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#">Новости</a>
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#">Новости</a>
             </li>
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#">Прайс-лист</a>
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#">Прайс-лист</a>
             </li>
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="catalog.html">Магазин</a>
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="catalog.html">Магазин</a>
             </li>
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#contacts">Контакты</a>
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#contacts">Контакты</a>
             </li>
           </ul>
-          <ul class="personal-area">
-            <li class="personal-area__item">
-              <a class="personal-area__link" href="#">
+          <ul class="main-nav__list user-nav">
+            <li class="user-nav__item">
+              <a class="user-nav__link" href="#">
                 <svg role="img" aria-hidden="true" width="16" height="16">
                   <use xlink:href="#icon-login" x="0" y="0"></use>
                 </svg>
@@ -129,16 +130,16 @@
           <h2 id="news" class="section__title">Новости</h2>
           <ul class="news__list">
             <li class="news__item">
-              <p class="news__description">Нам наконец завезли ягермайстер! еперь вы можете пропустить стаканчик во
+              <p class="section__description news__description">Нам наконец завезли ягермайстер! еперь вы можете
+                пропустить стаканчик во
                 время стрижки</p>
-              <!-- <date class="news__date" datetime="2020-01-11">11 января</date> -->
-              <span class="news__date">11 января</span>
+              <time class="news__date" datetime="2016-01-11">11 января</time>
             </li>
             <li class="news__item">
-              <p class="news__description">В нашей команде пополнение, борис «бритва» стригунец, обладaтель множества
+              <p class="section__description news__description">В нашей команде пополнение, борис «бритва» стригунец,
+                обладaтель множества
                 титулов и наград пополнил наши стройные ряды</p>
-              <!-- <date class="news__date" datetime="2020-01-18">18 января</date> -->
-              <span class="news__date">18 января</span>
+                <time class="news__date" datetime="2016-01-18">18 января</time>
             </li>
           </ul>
           <a class="btn" href="news.html">Все новости</a>
@@ -156,8 +157,8 @@
             </a>
           </figure>
           <div class="photo__buttons">
-            <button class="photo__btn photo__btn--previous btn" type="button">Назад</button>
-            <button class="photo__btn photo__btn--next btn" type="button">Вперед</button>
+            <button class="btn btn-res photo__btn" type="button">Назад</button>
+            <button class="btn btn-res photo__btn" type="button">Вперед</button>
           </div>
         </section>
         <!-- /.photo -->
@@ -167,7 +168,7 @@
 
         <section class="section contacts" aria-labelledby="contacts">
           <h2 id="contacts" class="section__title">Контактная информация</h2>
-          <div itemscope itemtype="http://schema.org/LocalBusiness">
+          <div itemscope itemtype="http://schema.org/LocalBusiness" class="section__description">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               Адрес:
@@ -190,29 +191,31 @@
 
         <section class="section sign-up" aria-labelledby="sign-up">
           <h2 id="sign-up" class="section__title">Записаться</h2>
-          <p class="sing-up__lead">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+          <p class="section__description sing-up__lead">Укажите желаемую дату и время и мы свяжемся с вами для
+            подтверждения брони</p>
           <form class="sign-up__form sign-up-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="sign-up-form__row">
               <p class="sign-up-form__col">
                 <label class="sign-up-form__label" for="date">Дата</label>
-                <input type="text" name="date" id="date" placeholder="08.10.2017" required>
+                <input class="sign-up-form__input" type="text" name="date" id="date" placeholder="08.10.2017" required>
               </p>
               <p class="sign-up-form__col">
                 <label class="sign-up-form__label" for="time">Время</label>
-                <input type="text" name="time" id="time" placeholder="10:00" required>
+                <input class="sign-up-form__input" type="text" name="time" id="time" placeholder="10:00" required>
               </p>
             </div>
             <div class="sign-up-form__row">
               <p class="sign-up-form__col">
                 <label class="sign-up-form__label" for="name">Ваше имя</label>
-                <input type="text" name="name" id="name" placeholder="Борода" required>
+                <input class="sign-up-form__input" type="text" name="name" id="name" placeholder="Борода" required>
               </p>
               <p class="sign-up-form__col">
                 <label class="sign-up-form__label" for="phone">Телефон</label>
-                <input type="tel" name="phone" id="phone" placeholder="+7 123 456-78-90" required>
+                <input class="sign-up-form__input" type="tel" name="phone" id="phone" placeholder="+7 123 456-78-90"
+                  required>
               </p>
             </div>
-            <button class="sign-up-form__btn" type="submit">Отправить</button>
+            <button class="btn btn-res sign-up-form__btn" type="submit">Отправить</button>
           </form>
         </section>
         <!-- /.sign-up -->
@@ -231,7 +234,7 @@
           <h2 id="footer-contacts" class="visually-hidden">Контактная информация</h2>
           <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
-            <a href="map.html">Как нас найти?</a>
+            <a class="footer-contacts__link" href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
           </div>
         </section>
@@ -271,7 +274,7 @@
         <section class="copyright" aria-labelledby="copyright">
           <h2 id="copyright" class="visually-hidden">Правообладатель</h2>
           <p>Разработано:</p>
-          <a href="https://htmlacademy.ru" lang="en">HTML Academy</a>
+          <a class="btn copyright-btn" href="https://htmlacademy.ru" lang="en">HTML Academy</a>
         </section>
         <!-- /.copyright -->
 
@@ -299,9 +302,13 @@
         </p>
         <a class="modal-form__link" href="#">Я забыл пароль!</a>
       </div>
-      <button class="modal-form__btn" type="submit">Войти</button>
+      <button class="btn btn-res modal-form__btn" type="submit">Войти</button>
     </form>
-    <button class="modal__close-btn" type="button">Закрыть</button>
+    <button class="btn btn-res modal__close-btn" type="button" aria-label="Закрыть">
+      <svg role="img" aria-hidden="true" width="12" height="12">
+        <use xlink:href="#icon-cross" x="0" y="0"></use>
+      </svg>
+    </button>
   </section>
   <!-- /.modal -->
 
@@ -311,7 +318,11 @@
       <img src="img/files/map-desktop@1x.png" width="780" height="560"
         alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
     </p>
-    <button class="modal__close-btn" type="button">Закрыть</button>
+    <button class="btn btn-res modal__close-btn" type="button" aria-label="Закрыть">
+      <svg role="img" aria-hidden="true" width="12" height="12">
+        <use xlink:href="#icon-cross" x="0" y="0"></use>
+      </svg>
+    </button>
   </section>
   <!-- /.map -->
 

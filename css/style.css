@@ -7,9 +7,16 @@
     url("../fonts/pt-sans-narrow-regular.woff") format("woff");
 }
 
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/pt-sans-narrow-700.woff2") format("woff2"), url("../fonts/pt-sans-narrow-700.woff") format("woff");
+}
+
 html {
   box-sizing: border-box;
-  font-size: 100%;
 }
 
 *,
@@ -19,18 +26,23 @@ html {
 }
 
 body {
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: 14px;
-
-  min-width: 320px;
-  height: 100%;
   margin: 0;
   padding: 0;
 
-  color: #000;
-  background-color: #fff;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  min-width: 320px;
+  height: 100%;
+
+  background-color: #000;
+  background-image: url("../img/files/index-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 a {
@@ -60,4 +72,212 @@ img {
   border: 0;
 
   clip-path: inset(100%);
+}
+
+.btn-res {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+
+  margin: 2px 0;
+
+  border: 1px solid transparent;
+  border-radius: 0;
+
+  padding: 0.5em 1em;
+
+  color: #ffffff;
+  background-color: #000;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #663d15;
+}
+
+.main-nav {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.user-nav__link svg {
+  fill: #fff;
+}
+
+.site-nav__link,
+.user-nav__link {
+  color: #ffffff;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus,
+.user-nav__link:hover,
+.user-nav__link:focus {
+  background-color: #242424;
+}
+
+.advantages {
+  color: #f7f4f1;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item {
+  text-align: center;
+}
+
+.advantages__title {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.page-wrapper {
+  color: #000000;
+
+  background-color: #f8f5f2;
+  background-image: url("../img/bg-white.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.section__title {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.news__list {
+  list-style: none;
+}
+
+.news__date {
+  text-transform: lowercase;
+}
+
+.photo__gallery {
+  background-color: #cccccc;
+  border: 7px solid #ffffff;
+}
+
+.sign-up-form__input {
+  font: inherit;
+
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.sign-up-form__input:focus {
+  border-color: #663d15;
+}
+
+.page-footer {
+  color: #ffffff;
+
+  background-color: #212121;
+  background-image: url("../img/bg-dark.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.footer-contacts__link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-contacts__link:hover,
+.footer-contacts__link:focus {
+  text-decoration: none;
+}
+
+.social {
+  text-align: center;
+}
+
+.social__list {
+  list-style: none;
+}
+
+.social__link svg {
+  fill: #fff;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyright-btn:hover,
+.copyright-btn:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.modal {
+  color: #000000;
+
+  background-color: #f8f3f0;
+  background-image: url("../img/bg-white.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.modal__title {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-form__link {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.modal--map {
+  background-color: #e9e5dc;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="password"] {
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.modal-form input:focus {
+  border-color: #663d15;
+}
+
+.modal-form__label:hover,
+.modal-form__label:focus {
+  color: #663d15;
+}
+
+.modal-form__link {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.modal-form__link:hover,
+.modal-form__link:focus {
+  text-decoration: none;
 }
