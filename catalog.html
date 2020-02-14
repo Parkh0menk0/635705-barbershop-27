@@ -9,13 +9,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/icon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="preload" href="./fonts/pt-sans-narrow-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>HTML Academy: Барбершоп &mdash; Каталог товаров</title>
+  <link rel="preload" href="./fonts/pt-sans-narrow-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/pt-sans-narrow-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-inner">
 
   <div style="display: none;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -62,29 +63,29 @@
           <a class="page-header__logo logo" href="index.html">
             <img src="img/logo-small.svg" width="111" height="24" alt="Барбершоп Бородинский">
           </a>
-          <ul class="main-nav__list" role="menu">
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#">Информация</a>
+          <ul class="main-nav__list site-nav" role="menu">
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#">Информация</a>
             </li>
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#">Новости</a>
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#">Новости</a>
             </li>
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#">Прайс-лист</a>
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#">Прайс-лист</a>
             </li>
-            <li class="main-nav__item" role="menuitem" aria-current="page">
-              <a class="main-nav__link" tabindex="0">
+            <li class="site-nav__item" role="menuitem" aria-current="page">
+              <a class="site-nav__link" tabindex="0">
                 <span class="visually-hidden">Текущий пункт:</span>
                 Магазин
               </a>
             </li>
-            <li class="main-nav__item" role="menuitem">
-              <a class="main-nav__link" href="#">Контакты</a>
+            <li class="site-nav__item" role="menuitem">
+              <a class="site-nav__link" href="#">Контакты</a>
             </li>
           </ul>
-          <ul class="personal-area">
-            <li class="personal-area__item">
-              <a class="personal-area__link" href="#">
+          <ul class="main-nav__list user-nav">
+            <li class="user-nav__item">
+              <a class="user-nav__link" href="#">
                 <svg role="img" aria-hidden="true" width="16" height="16">
                   <use xlink:href="#icon-login" x="0" y="0"></use>
                 </svg>
@@ -110,7 +111,7 @@
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="catalog.html">Магазин</a>
         </li>
-        <li class="breadcrumbs__item" aria-current="page">
+        <li class="breadcrumbs__item breadcrumbs__item--active" aria-current="page">
           <span class="visually-hidden">Текущий пункт:</span>
           Средства для ухода
         </li>
@@ -123,28 +124,28 @@
           <form class="search__form search-form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="search-form__fieldset">
               <legend class="search-form__legend">Производители</legend>
-              <ul class="search-form__list">
-                <li class="search-form__item">
+              <ul class="search-form__list" role="listbox">
+                <li class="search-form__item" role="option">
                   <input type="checkbox" name="baxter-of-california" id="baxter-of-california" checked>
                   <label class="search-form__label" for="baxter-of-california" lang="en">Baxter of California</label>
                 </li>
-                <li class="search-form__item">
+                <li class="search-form__item" role="option">
                   <input type="checkbox" name="mr-natty" id="mr-natty">
                   <label class="search-form__label" for="mr-natty" lang="en">Mr Natty</label>
                 </li>
-                <li class="search-form__item">
+                <li class="search-form__item" role="option">
                   <input type="checkbox" name="suavecito" id="suavecito" checked>
                   <label class="search-form__label" for="suavecito" lang="en">Suavecito</label>
                 </li>
-                <li class="search-form__item">
+                <li class="search-form__item" role="option">
                   <input type="checkbox" name="malin+goetz" id="malin+goetz">
                   <label class="search-form__label" for="malin+goetz" lang="en">Malin+Goetz</label>
                 </li>
-                <li class="search-form__item">
+                <li class="search-form__item" role="option">
                   <input type="checkbox" name="murrays" id="murrays">
                   <label class="search-form__label" for="murrays" lang="en">Murray’s</label>
                 </li>
-                <li class="search-form__item">
+                <li class="search-form__item" role="option">
                   <input type="checkbox" name="american-crew" id="american-crew" checked>
                   <label class="search-form__label" for="american-crew" lang="en">American Crew</label>
                 </li>
@@ -152,22 +153,22 @@
             </fieldset>
             <fieldset class="search-form__fieldset">
               <legend class="search-form__legend">Группы товаров</legend>
-              <ul class="search-form__list">
-                <li class="search-form__item">
+              <ul class="search-form__list" role="listbox">
+                <li class="search-form__item" role="option">
                   <input type="radio" name="goods" id="shaving">
                   <label class="search-form__label" for="shaving">Бритвенные принадлежности</label>
                 </li>
-                <li class="search-form__item">
+                <li class="search-form__item" role="option">
                   <input type="radio" name="goods" id="care" checked>
                   <label class="search-form__label" for="care">Средства для ухода</label>
                 </li>
-                <li class="search-form__item">
+                <li class="search-form__item" role="option">
                   <input type="radio" name="goods" id="accessories">
                   <label class="search-form__label" for="accessories">Аксессуары</label>
                 </li>
               </ul>
             </fieldset>
-            <button class="search-form__btn" type="submit">Показать</button>
+            <button class="btn btn-res search-form__btn" type="submit">Показать</button>
           </form>
         </section>
         <!-- /.search -->
@@ -189,7 +190,7 @@
               </a>
               <p class="product__buy">
                 <b class="product__price">2900 ₽</b>
-                <a href="#" class="product__buy-btn">Купить</a>
+                <a href="#" class="btn product__buy-btn">Купить</a>
               </p>
             </li>
             <li class="gallery__item product">
@@ -206,7 +207,7 @@
               </a>
               <p class="product__buy">
                 <b class="product__price">750 ₽</b>
-                <a href="#" class="product__buy-btn">Купить</a>
+                <a href="#" class="btn product__buy-btn">Купить</a>
               </p>
             </li>
             <li class="gallery__item product">
@@ -217,12 +218,13 @@
                 </h3>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-item-3@1x.webp 1x">
-                  <img src="img/files/gallery-item-3@1x.jpg" width="220" height="165" aria-hidden="true" alt="Гель для волос «Suavecito»">
+                  <img src="img/files/gallery-item-3@1x.jpg" width="220" height="165" aria-hidden="true"
+                    alt="Гель для волос «Suavecito»">
                 </picture>
               </a>
               <p class="product__buy">
                 <b class="product__price">290 ₽</b>
-                <a href="#" class="product__buy-btn">Купить</a>
+                <a href="#" class="btn product__buy-btn">Купить</a>
               </p>
             </li>
             <li class="gallery__item product">
@@ -239,7 +241,7 @@
               </a>
               <p class="product__buy">
                 <b class="product__price">500 ₽</b>
-                <a href="#" class="product__buy-btn">Купить</a>
+                <a href="#" class="btn product__buy-btn">Купить</a>
               </p>
             </li>
             <li class="gallery__item product">
@@ -256,7 +258,7 @@
               </a>
               <p class="product__buy">
                 <b class="product__price">300 ₽</b>
-                <a href="#" class="product__buy-btn">Купить</a>
+                <a href="#" class="btn product__buy-btn">Купить</a>
               </p>
             </li>
             <li class="gallery__item product">
@@ -273,7 +275,7 @@
               </a>
               <p class="product__buy">
                 <b class="product__price">3900 ₽</b>
-                <a href="#" class="product__buy-btn">Купить</a>
+                <a href="#" class="btn product__buy-btn">Купить</a>
               </p>
             </li>
           </ul>
@@ -282,25 +284,25 @@
             <h2 id="pagination" class="visually-hidden">Пагинация</h2>
             <ol class="pagination__list">
               <li class="pagination__item">
-                <a class="pagination__link" href="#">
+                <a class="btn pagination__link" href="#">
                   <span class="visually-hidden">Страница номер:</span>
                   1
                 </a>
               </li>
               <li class="pagination__item pagination__item--active">
-                <a class="pagination__link" tabindex="0">
+                <a class="btn pagination__link" tabindex="0">
                   <span class="visually-hidden">Страница номер:</span>
                   2
                 </a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="#">
+                <a class="btn pagination__link" href="#">
                   <span class="visually-hidden">Страница номер:</span>
                   3
                 </a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="#">
+                <a class="btn pagination__link" href="#">
                   <span class="visually-hidden">Страница номер:</span>
                   4
                 </a>
@@ -325,7 +327,7 @@
           <h2 id="footer-contacts" class="visually-hidden">Контактная информация</h2>
           <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
-            <a href="map.html">Как нас найти?</a>
+            <a class="footer-contacts__link" href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
           </div>
         </section>
@@ -365,7 +367,7 @@
         <section class="copyright" aria-labelledby="copyright">
           <h2 id="copyright" class="visually-hidden">Правообладатель</h2>
           <p>Разработано:</p>
-          <a href="https://htmlacademy.ru" lang="en">HTML Academy</a>
+          <a class="btn copyright-btn" href="https://htmlacademy.ru" lang="en">HTML Academy</a>
         </section>
         <!-- /.copyright -->
 
@@ -393,9 +395,13 @@
         </p>
         <a class="modal-form__link" href="#">Я забыл пароль!</a>
       </div>
-      <button class="modal-form__btn" type="submit">Войти</button>
+      <button class="btn btn-res modal-form__btn" type="submit">Войти</button>
     </form>
-    <button class="modal__close-btn" type="button">Закрыть</button>
+    <button class="btn btn-res modal__close-btn" type="button" aria-label="Закрыть">
+      <svg role="img" aria-hidden="true" width="12" height="12">
+        <use xlink:href="#icon-cross" x="0" y="0"></use>
+      </svg>
+    </button>
   </section>
   <!-- /.modal -->
 
@@ -405,7 +411,11 @@
       <img src="img/files/map-desktop@1x.png" width="780" height="560"
         alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
     </p>
-    <button class="modal__close-btn" type="button">Закрыть</button>
+    <button class="btn btn-res modal__close-btn" type="button" aria-label="Закрыть">
+      <svg role="img" aria-hidden="true" width="12" height="12">
+        <use xlink:href="#icon-cross" x="0" y="0"></use>
+      </svg>
+    </button>
   </section>
   <!-- /.map -->
 
