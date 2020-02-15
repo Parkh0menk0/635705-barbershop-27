@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-inner">
+<body class="inner-page">
 
   <div style="display: none;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -56,10 +56,10 @@
   </div>
 
   <header class="page-header">
-    <div class="container">
-      <div class="page-header__wrapper">
-        <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
-          <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
+    <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
+      <div class="container">
+        <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
+        <div class="main-nav__wrapper">
           <a class="page-header__logo logo" href="index.html">
             <img src="img/logo-small.svg" width="111" height="24" alt="Барбершоп Бородинский">
           </a>
@@ -93,16 +93,16 @@
               </a>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
   <!-- /.page-header -->
 
-  <main class="catalog">
+  <main>
     <div class="container">
 
-      <h1 class="catalog__title">Средства для ухода</h1>
+      <h1 class="page-title">Средства для ухода</h1>
 
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
@@ -327,6 +327,11 @@
           <h2 id="footer-contacts" class="visually-hidden">Контактная информация</h2>
           <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              Адрес:
+              <span itemprop="addressLocality">г. Санкт-Петербург</span>
+              <span itemprop="streetAddress" class="street">б. Конюшенная, д. 19/8</span>
+            </div>
             <a class="footer-contacts__link" href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
           </div>

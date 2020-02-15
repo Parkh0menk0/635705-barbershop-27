@@ -48,7 +48,7 @@ body {
   background-position: top center;
 }
 
-.page-inner {
+.inner-page {
   color: #000;
   background-color: #f9f6f3;
   background-image: url("../img/bg-white.jpg");
@@ -135,11 +135,25 @@ img {
   margin-bottom: 75px;
 }
 
+.inner-page .page-header {
+  margin-bottom: 50px;
+
+  background-color: #000;
+}
+
 .logo {
   width: 368px;
   height: 153px;
 
   order: 2;
+}
+
+.inner-page .logo {
+  width: 111px;
+  height: 24px;
+  padding: 23px 20px;
+
+  order: 0;
 }
 
 .main-nav {
@@ -176,6 +190,10 @@ img {
   padding: 0;
 
   list-style: none;
+}
+
+.inner-page .user-nav {
+  margin-left: auto;
 }
 
 .user-nav__link svg {
@@ -284,12 +302,20 @@ img {
   border-color: #663d15;
 }
 
-.catalog__title {
+.page-title {
   font-size: 30px;
   line-height: 42px;
+
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
 }
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -304,6 +330,16 @@ img {
 
 .breadcrumbs__item--active {
   color: #aba9a7;
+}
+
+.goods {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.search-form {
+  width: 180px;
 }
 
 .search-form__fieldset {
@@ -334,16 +370,39 @@ input[type="checkbox"]:disabled + label {
   color: #000;
 }
 
+.gallery {
+  width: 700px;
+}
+
 .gallery__list {
+  display: flex;
+
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
   list-style: none;
+
+  flex-wrap: wrap;
 }
 
 .gallery__item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.gallery__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.product {
+  width: 220px;
+
   background-color: #f8f8f8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.gallery__item:hover {
+.product:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -376,6 +435,9 @@ input[type="checkbox"]:disabled + label {
 }
 
 .pagination__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -446,6 +508,10 @@ input[type="checkbox"]:disabled + label {
   background-image: url("../img/bg-dark.jpg");
   background-repeat: repeat;
   background-position: 0 0;
+}
+
+.inner-page .page-footer {
+  margin-top: 45px;
 }
 
 .page-footer__wrapper {
