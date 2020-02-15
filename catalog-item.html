@@ -56,10 +56,10 @@
   </div>
 
   <header class="page-header">
-    <div class="container">
-      <div class="page-header__wrapper">
-        <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
-          <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
+    <nav class="page-header__nav main-nav" aria-labelledby="nav-heading">
+      <div class="container">
+        <h2 id="nav-heading" class="visually-hidden">Навигация по странице</h2>
+        <div class="main-nav__wrapper">
           <a class="page-header__logo logo" href="index.html">
             <img src="img/logo-small.svg" width="111" height="24" alt="Барбершоп Бородинский">
           </a>
@@ -74,7 +74,7 @@
               <a class="site-nav__link" href="#">Прайс-лист</a>
             </li>
             <li class="site-nav__item" role="menuitem" aria-current="page">
-              <a class="site-nav__link">
+              <a class="site-nav__link" tabindex="0">
                 <span class="visually-hidden">Текущий пункт:</span>
                 Магазин
               </a>
@@ -93,16 +93,15 @@
               </a>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
   <!-- /.page-header -->
 
   <main class="catalog-item">
     <div class="container">
-      <div class="catalog-item__nav">
-        <h1 class="catalog-item__title">Набор для путешествий «Baxter of California»</h1>
+        <h1 class="page-title">Набор для путешествий «Baxter of California»</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
@@ -118,9 +117,8 @@
             Набор для путешествий «Baxter of California»
           </li>
         </ul>
-      </div>
 
-      <div class="catalog-item__wrapper">
+      <div class="goods">
 
         <section class="catalog-item__photos photos" aria-labelledby="photos">
           <h2 id="photos" class="visually-hidden">Изображения товара</h2>
@@ -198,6 +196,11 @@
           <h2 id="footer-contacts" class="visually-hidden">Контактная информация</h2>
           <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name" class="company">Барбершоп "Бородинский"</span>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              Адрес:
+              <span itemprop="addressLocality">г. Санкт-Петербург</span>
+              <span itemprop="streetAddress" class="street">б. Конюшенная, д. 19/8</span>
+            </div>
             <a class="footer-contacts__link" href="map.html">Как нас найти?</a>
             <div>Телефон: <span itemprop="telephone">+7 (495) 666-02-66</span></div>
           </div>
